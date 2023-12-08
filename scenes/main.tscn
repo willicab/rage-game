@@ -1,0 +1,417 @@
+[gd_scene load_steps=31 format=3 uid="uid://bsfhdwowv8ca4"]
+
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_wpcw2"]
+[ext_resource type="PackedScene" uid="uid://ds7vaicmn5ruv" path="res://scenes/jar.tscn" id="2_eauet"]
+[ext_resource type="Texture2D" uid="uid://b1hd56evu8ex4" path="res://assets/images/background.jpg" id="2_irhbr"]
+[ext_resource type="FontFile" uid="uid://db0e6ob6mv521" path="res://assets/fonts/TragicMarker-Regular.otf" id="3_lrlfn"]
+[ext_resource type="Texture2D" uid="uid://fyu16ct60htc" path="res://assets/rages/fuuuuuu.png" id="3_uv0tg"]
+[ext_resource type="Texture2D" uid="uid://c8aapu2ahj3hg" path="res://assets/images/sound-on.png" id="5_rsnu5"]
+[ext_resource type="Texture2D" uid="uid://i5ft4etc8qkm" path="res://assets/images/pause.png" id="6_cva4l"]
+[ext_resource type="Texture2D" uid="uid://bcbofmvr36w41" path="res://assets/images/fullscreen.png" id="6_fclgx"]
+[ext_resource type="AudioStream" uid="uid://b07kne0m0c7ck" path="res://assets/sounds/NyanCat.ogg" id="6_p2s8p"]
+[ext_resource type="AudioStream" uid="uid://dd31q5auquu1w" path="res://assets/sounds/Bubble.ogg" id="9_n48bp"]
+[ext_resource type="AudioStream" uid="uid://gbwpl8oaa8yt" path="res://assets/sounds/GameOver.wav" id="10_cl47t"]
+[ext_resource type="AudioStream" uid="uid://dj36cfk2w8smh" path="res://assets/sounds/aplauses.ogg" id="11_hrjfj"]
+[ext_resource type="AudioStream" uid="uid://bpng0mct3wlth" path="res://assets/sounds/toc.ogg" id="11_tj2mt"]
+[ext_resource type="Texture2D" uid="uid://cqspaccakt71f" path="res://assets/rages/trollface.png" id="12_p18pn"]
+[ext_resource type="AudioStream" uid="uid://c88tq4ve872xw" path="res://assets/sounds/out.wav" id="12_srppa"]
+[ext_resource type="Texture2D" uid="uid://ba5pf1kf8sy2l" path="res://assets/images/rage-evolution.png" id="13_eqqjm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57l3l"]
+bg_color = Color(1, 1, 1, 0.490196)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_13lp4"]
+font = ExtResource("3_lrlfn")
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_i4nxt"]
+font = ExtResource("3_lrlfn")
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_e3mts"]
+font = ExtResource("3_lrlfn")
+font_size = 34
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1up5"]
+size = Vector2(368, 238)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kchet"]
+font = ExtResource("3_lrlfn")
+
+[sub_resource type="LabelSettings" id="LabelSettings_3cpn2"]
+font = ExtResource("3_lrlfn")
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_id8bh"]
+font = ExtResource("3_lrlfn")
+font_size = 128
+
+[sub_resource type="LabelSettings" id="LabelSettings_ay12v"]
+font = ExtResource("3_lrlfn")
+font_size = 72
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ngtpd"]
+font = ExtResource("3_lrlfn")
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_eby60"]
+font = ExtResource("3_lrlfn")
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_os7qw"]
+font = ExtResource("3_lrlfn")
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_5bpru"]
+font = ExtResource("3_lrlfn")
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_iqie6"]
+font = ExtResource("3_lrlfn")
+font_size = 32
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_wpcw2")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.967254, 0.967164)
+texture = ExtResource("2_irhbr")
+
+[node name="Line" type="Line2D" parent="."]
+position = Vector2(-24, 0)
+points = PackedVector2Array(0, 0, 0, 575)
+width = 2.0
+default_color = Color(1, 1, 1, 0.490196)
+
+[node name="Top" type="Line2D" parent="."]
+points = PackedVector2Array(384, 118, 770, 118)
+width = 1.0
+default_color = Color(0.364706, 0.364706, 0.364706, 1)
+
+[node name="Jar" parent="." instance=ExtResource("2_eauet")]
+position = Vector2(576, 382)
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 948.0
+offset_top = 68.0
+offset_right = 1063.0
+offset_bottom = 183.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_57l3l")
+
+[node name="lblNext" type="Label" parent="."]
+offset_left = 948.0
+offset_top = 183.0
+offset_right = 1063.0
+offset_bottom = 244.0
+text = "Next"
+label_settings = SubResource("LabelSettings_13lp4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Next" type="Sprite2D" parent="."]
+position = Vector2(1006, 125)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_uv0tg")
+
+[node name="Preview" type="Sprite2D" parent="."]
+position = Vector2(-100, -100)
+
+[node name="lblTime" type="Label" parent="."]
+offset_left = 1.0
+offset_top = 68.0
+offset_right = 311.0
+offset_bottom = 136.0
+text = "00:00:00"
+label_settings = SubResource("LabelSettings_i4nxt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Time" type="Timer" parent="."]
+
+[node name="lblBestTime" type="Label" parent="."]
+offset_left = 49.0
+offset_top = 149.0
+offset_right = 195.0
+offset_bottom = 584.0
+text = "Best times:
+00:00:00
+2
+3
+4
+5
+6
+7
+8
+9
+10"
+label_settings = SubResource("LabelSettings_e3mts")
+
+[node name="btnPause" type="TextureButton" parent="."]
+visible = false
+offset_left = 1088.0
+offset_top = 16.0
+offset_right = 1168.0
+offset_bottom = 96.0
+scale = Vector2(0.6, 0.6)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("6_cva4l")
+
+[node name="AreaDead" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDead"]
+position = Vector2(577, -4)
+shape = SubResource("RectangleShape2D_r1up5")
+
+[node name="TimerDead" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="lblCreator" type="Label" parent="."]
+offset_left = 1032.0
+offset_top = 600.0
+offset_right = 1144.0
+offset_bottom = 640.0
+text = "Rage Game
+Created by willicab"
+label_settings = SubResource("LabelSettings_kchet")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rage-evolution" type="Sprite2D" parent="."]
+position = Vector2(998, 384)
+scale = Vector2(0.793333, 0.793333)
+texture = ExtResource("13_eqqjm")
+
+[node name="lblEvolution" type="Label" parent="."]
+offset_left = 876.0
+offset_top = 510.0
+offset_right = 1118.0
+offset_bottom = 562.0
+text = "Rage Evolution"
+label_settings = SubResource("LabelSettings_3cpn2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NyanCat" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+z_index = 10
+stream = ExtResource("6_p2s8p")
+volume_db = -10.0
+autoplay = true
+
+[node name="Bubble" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_n48bp")
+volume_db = 10.0
+
+[node name="GameOver" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("10_cl47t")
+volume_db = 10.0
+
+[node name="Toc" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_tj2mt")
+
+[node name="Aplauses" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("11_hrjfj")
+volume_db = 10.0
+
+[node name="Out" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_srppa")
+volume_db = 10.0
+
+[node name="Menu" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Menu"]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.392157)
+
+[node name="Title" type="Label" parent="Menu"]
+offset_right = 1152.0
+offset_bottom = 249.0
+text = "Rage Game"
+label_settings = SubResource("LabelSettings_id8bh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblGameOver" type="Label" parent="Menu"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.0
+offset_top = -106.0
+offset_right = 132.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Game Over"
+label_settings = SubResource("LabelSettings_ay12v")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblRecord" type="Label" parent="Menu"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -26.0
+offset_right = 576.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "New Record: 00:00:00"
+label_settings = SubResource("LabelSettings_ngtpd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblContinue" type="Label" parent="Menu"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.5
+offset_top = 22.0
+offset_right = 73.5
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+text = "Continue"
+label_settings = SubResource("LabelSettings_eby60")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblStart" type="Label" parent="Menu"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.5
+offset_top = 76.0
+offset_right = 82.5
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+text = "New Game"
+label_settings = SubResource("LabelSettings_os7qw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblExit" type="Label" parent="Menu"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.5
+offset_top = 135.0
+offset_right = 33.5
+offset_bottom = 187.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+text = "Exit"
+label_settings = SubResource("LabelSettings_5bpru")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btnSound" type="TextureButton" parent="Menu"]
+offset_left = 1088.0
+offset_top = 16.0
+offset_right = 1168.0
+offset_bottom = 96.0
+scale = Vector2(0.6, 0.6)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("5_rsnu5")
+
+[node name="btnWindow" type="TextureButton" parent="Menu"]
+offset_left = 1024.0
+offset_top = 16.0
+offset_right = 1104.0
+offset_bottom = 96.0
+scale = Vector2(0.6, 0.6)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("6_fclgx")
+
+[node name="Trollface" type="Sprite2D" parent="Menu"]
+visible = false
+position = Vector2(576, 294)
+texture = ExtResource("12_p18pn")
+
+[node name="Screenshot" type="TextureRect" parent="Menu"]
+visible = false
+offset_left = 759.0
+offset_top = 240.0
+offset_right = 1104.0
+offset_bottom = 432.0
+texture = ExtResource("2_irhbr")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="lblScreenshot" type="Label" parent="Menu"]
+visible = false
+offset_left = 760.0
+offset_top = 434.0
+offset_right = 1103.0
+offset_bottom = 460.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+text = "Save Screenshot"
+label_settings = SubResource("LabelSettings_iqie6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FileDialog" type="FileDialog" parent="Menu"]
+title = "Save Screenshot"
+initial_position = 1
+size = Vector2i(640, 480)
+popup_window = true
+ok_button_text = "Save"
+dialog_hide_on_ok = true
+access = 2
+show_hidden_files = true
+
+[connection signal="timeout" from="Time" to="." method="_on_time_timeout"]
+[connection signal="pressed" from="btnPause" to="." method="_on_btn_pause_pressed"]
+[connection signal="body_entered" from="AreaDead" to="." method="_on_area_dead_body_entered"]
+[connection signal="body_exited" from="AreaDead" to="." method="_on_area_dead_body_exited"]
+[connection signal="timeout" from="TimerDead" to="." method="_on_timer_dead_timeout"]
+[connection signal="finished" from="NyanCat" to="." method="_on_nyan_cat_finished"]
+[connection signal="gui_input" from="Menu/lblContinue" to="." method="_on_lbl_continue_gui_input"]
+[connection signal="mouse_entered" from="Menu/lblContinue" to="." method="_on_lbl_continue_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/lblContinue" to="." method="_on_lbl_continue_mouse_exited"]
+[connection signal="gui_input" from="Menu/lblStart" to="." method="_on_lbl_start_gui_input"]
+[connection signal="mouse_entered" from="Menu/lblStart" to="." method="_on_lbl_start_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/lblStart" to="." method="_on_lbl_start_mouse_exited"]
+[connection signal="gui_input" from="Menu/lblExit" to="." method="_on_lbl_exit_gui_input"]
+[connection signal="mouse_entered" from="Menu/lblExit" to="." method="_on_lbl_exit_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/lblExit" to="." method="_on_lbl_exit_mouse_exited"]
+[connection signal="pressed" from="Menu/btnSound" to="." method="_on_btn_sound_pressed"]
+[connection signal="pressed" from="Menu/btnWindow" to="." method="_on_btn_window_pressed"]
+[connection signal="gui_input" from="Menu/lblScreenshot" to="." method="_on_lbl_screenshot_gui_input"]
+[connection signal="mouse_entered" from="Menu/lblScreenshot" to="." method="_on_lbl_screenshot_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/lblScreenshot" to="." method="_on_lbl_screenshot_mouse_exited"]
+[connection signal="file_selected" from="Menu/FileDialog" to="." method="_on_file_dialog_file_selected"]

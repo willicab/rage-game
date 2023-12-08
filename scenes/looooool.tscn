@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dakb206n3xwcw"]
+
+[ext_resource type="PackedScene" uid="uid://bf8i4l8p61j34" path="res://scenes/rageface.tscn" id="1_m3rr6"]
+[ext_resource type="Texture2D" uid="uid://ck7biiacx3n68" path="res://assets/rages/loooooool.png" id="2_4wjod"]
+
+[node name="looooool" groups=["looooool"] instance=ExtResource("1_m3rr6")]
+ragename = "looooool"
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4wjod")
+
+[node name="CollisionPolygon2D" parent="." index="1"]
+polygon = PackedVector2Array(-15, -59, 3, -59, 13, -57, 25, -54, 32, -51, 36, -46, 42, -44, 44, -41, 44, -34, 46, -32, 46, -22, 50, -19, 51, -12, 51, -4, 49, 1, 48, 6, 48, 12, 50, 17, 50, 32, 48, 38, 45, 43, 41, 47, 36, 49, 32, 50, 31, 51, 26, 55, 21, 55, 19, 57, 13, 59, 9, 59, 3, 57, -3, 54, -7, 54, -14, 51, -20, 48, -27, 44, -32, 40, -36, 35, -40, 28, -44, 20, -47, 12, -50, 3, -52, -3, -52, -13, -50, -26, -46, -38, -40, -46, -33, -51, -25, -56)

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj102g7mf30bf"]
+
+[ext_resource type="PackedScene" uid="uid://bf8i4l8p61j34" path="res://scenes/rageface.tscn" id="1_iosy2"]
+[ext_resource type="Texture2D" uid="uid://u3uo8qxmh601" path="res://assets/rages/foreveralone.png" id="2_bn3na"]
+
+[node name="foreveralone" groups=["foreveralone"] instance=ExtResource("1_iosy2")]
+ragename = "foreveralone"
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_bn3na")
+
+[node name="CollisionPolygon2D" parent="." index="1"]
+polygon = PackedVector2Array(-10, -7, -7, -10, -2, -12, 1, -11, 4, -7, 7, -6, 9, -4, 11, -1, 11, 3, 8, 9, 5, 11, -3, 12, -6, 10, -12, 4, -11, 1)

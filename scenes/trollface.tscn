@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://6xxjik0fb76y"]
+
+[ext_resource type="PackedScene" uid="uid://bf8i4l8p61j34" path="res://scenes/rageface.tscn" id="1_j7maf"]
+[ext_resource type="Texture2D" uid="uid://cqspaccakt71f" path="res://assets/rages/trollface.png" id="2_7f6fo"]
+
+[node name="trollface" groups=["trollface"] instance=ExtResource("1_j7maf")]
+ragename = "trollface"
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_7f6fo")
+
+[node name="CollisionPolygon2D" parent="." index="1"]
+polygon = PackedVector2Array(-117, -89, -105, -97, -91, -105, -74, -110, -54, -116, -34, -118, 70, -119, 88, -111, 98, -99, 106, -83, 116, -65, 127, -54, 139, -42, 141, -26, 138, -8, 127, 4, 117, 17, 111, 30, 106, 41, 91, 55, 77, 65, 55, 78, 4, 103, -24, 110, -60, 117, -96, 117, -111, 112, -122, 104, -130, 93, -130, 59, -127, 44, -126, 12, -131, -1, -140, -20, -143, -38, -140, -47, -125, -64, -119, -73)

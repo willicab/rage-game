@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk4xrsi6echk8"]
+
+[ext_resource type="PackedScene" uid="uid://bf8i4l8p61j34" path="res://scenes/rageface.tscn" id="1_bjgam"]
+[ext_resource type="Texture2D" uid="uid://bipnbcemy3mul" path="res://assets/rages/pokerface.png" id="2_ppb2m"]
+
+[node name="pokerface" groups=["pokerface"] instance=ExtResource("1_bjgam")]
+ragename = "pokerface"
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_ppb2m")
+
+[node name="CollisionPolygon2D" parent="." index="1"]
+polygon = PackedVector2Array(-47, -85, -34, -87, -26, -92, -10, -93, 20, -94, 30, -92, 43, -81, 55, -70, 66, -51, 73, -29, 79, -5, 79, 37, 75, 52, 73, 60, 57, 73, 32, 92, -3, 91, -17, 89, -41, 79, -60, 62, -74, 34, -79, 26, -79, -41, -70, -61, -61, -76)

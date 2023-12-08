@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://p5v0tftahhxv"]
+
+[ext_resource type="PackedScene" uid="uid://bf8i4l8p61j34" path="res://scenes/rageface.tscn" id="1_8qf65"]
+[ext_resource type="Texture2D" uid="uid://q1po7lnyuqql" path="res://assets/rages/ohgod.png" id="2_0v3hy"]
+
+[node name="ohgod" groups=["ohgod"] instance=ExtResource("1_8qf65")]
+ragename = "ohgod"
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_0v3hy")
+
+[node name="CollisionPolygon2D" parent="." index="1"]
+polygon = PackedVector2Array(-55, -39, -47, -50, -36, -59, -23, -66, -11, -69, -2, -70, 11, -70, 21, -69, 32, -64, 42, -54, 50, -43, 55, -23, 58, -6, 58, 14, 57, 25, 53, 32, 62, 37, 64, 45, 62, 51, 57, 54, 51, 56, 44, 55, 36, 52, 32, 47, 27, 49, 23, 51, 21, 53, 17, 56, 8, 57, -2, 57, -4, 63, -11, 70, -26, 71, -40, 70, -40, 62, -36, 51, -30, 45, -38, 42, -42, 40, -48, 42, -53, 36, -51, 32, -57, 20, -62, 8, -63, -9, -63, -20, -60, -31)

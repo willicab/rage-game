@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf8i4l8p61j34"]
+
+[ext_resource type="Script" path="res://scenes/rageface.gd" id="1_qyvbv"]
+[ext_resource type="Texture2D" uid="uid://dtvitcy16xyfk" path="res://icon.svg" id="2_odqdw"]
+
+[node name="rageface" type="RigidBody2D" groups=["rageface"]]
+can_sleep = false
+max_contacts_reported = 4
+contact_monitor = true
+script = ExtResource("1_qyvbv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_odqdw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

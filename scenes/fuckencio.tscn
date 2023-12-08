@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn1vuk1j6yc8v"]
+
+[ext_resource type="PackedScene" uid="uid://bf8i4l8p61j34" path="res://scenes/rageface.tscn" id="1_rox45"]
+[ext_resource type="Texture2D" uid="uid://cut1auvjnlx38" path="res://assets/rages/fuckencio.png" id="2_le7ty"]
+
+[node name="fuckencio" groups=["fuckencio"] instance=ExtResource("1_rox45")]
+mass = 4.0
+ragename = "fuckencio"
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_le7ty")
+
+[node name="CollisionPolygon2D" parent="." index="1"]
+polygon = PackedVector2Array(-28, -14, -13, -31, 0, -35, 7, -35, 12, -32, 22, -21, 22, -16, 26, -10, 29, -5, 29, 14, 29, 18, 24, 30, 15, 34, 3, 36, -8, 34, -15, 30, -22, 26, -27, 17, -29, 8, -29, -6, -28, -10)

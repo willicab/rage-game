@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds7vaicmn5ruv"]
+
+[ext_resource type="Texture2D" uid="uid://b52ymsnuohwtk" path="res://assets/images/jar.png" id="1_dhqs5"]
+
+[node name="Jar" type="CharacterBody2D" groups=["jar"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_dhqs5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-184, -508, -184, -267, -179, -261, -163, -237, -164, -192, -168, -187, -191, -175, -203, -165, -216, -151, -226, -135, -233, -116, -235, -99, -235, 122, -231, 150, -223, 180, -207, 205, -189, 220, -158, 232, -118, 238, 117, 238, 146, 234, 176, 226, 201, 211, 220, 186, 233, 139, 234, 120, 234, -99, 232, -114, 226, -132, 215, -152, 200, -167, 186, -178, 170, -186, 165, -193, 165, -237, 178, -260, 186, -266, 186, -505, 695, -505, 695, 391, -641, 390, -642, -508)
